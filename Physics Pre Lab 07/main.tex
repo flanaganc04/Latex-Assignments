@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym,amsfonts,amssymb,amsthm,amsmath}
+
+\setlength{\parindent}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.8in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{5pt}
+
+\title{Physics Pre Lab 7 - Air Drag of a Projectile}
+\author{Colin Flanagan}
+\date{October 21st, 2024}
+
+\begin{document}
+
+\maketitle
+
+\subsection*{What is the goal of this experiment? (What principles are we studying?)}
+
+    The goal of this experiment is to create a simulation of a projectile that does not ignore air resistance. Using this simulation we should be able to calculate the trajectory of the ball in real life and place hoops to pass it through while in flight.
+    
+
+\subsection*{What are some reasons why it is important to study these principles?
+}
+
+    Drag is what allows us to fly planes, shoot rockets into space, and torpedos. It is a very important concept for understanding how objects move through fluids.  
+    
+\subsection*{What basic physics concepts are applicable to this situation, and how do they apply? (Examples: Definitions of movement, Newton’s Laws of Motion, Conservation of Momentum, etc.)}
+
+    Forces and Newton's Laws of Motion\\
+    Kinematics
+
+\subsection*{What are some possible questions you can investigate while performing this lab?
+}
+
+   How will the uncertainty in the projectile launcher be taken into account \\ 
+   
+   Can the photo gate be used to determine how long the projectile is in the air\\
+
+\subsection*{Describe your experimental design to accomplish the task. (You should not be writing a bulleted list of steps to be completed, but rather a qualitative description of the process which you will refine with your group during lab. Your pre-lab experimental design should be approximately one to three paragraphs in length.)}
+
+    To measure the coefficient of drag (in this case air resistance) we should examine a free body diagram of the projectile falling. It can be seen there that drag opposes the direction of the velocity vector meaning there is drag in the x and y direction of the ball giving us the two equations
+
+    \begin{align*}
+        \Sigma{}F_y = ma_y &= F_d - F_g\\
+        ma_y &= \frac{1}{2}C\rho{}Av^2 - mg
+    \end{align*}
+    and 
+    \begin{align*}
+        \Sigma{}F_x = ma_x &= -F_d\\
+        ma_x &= -\frac{1}{2}C\rho{}Av^2
+    \end{align*}
+    Using these sets of equations we can solve for the acceleration, final velocity, and final position of the ball in the x and y direction at given time intervals. The smaller the interval the more precise the trajectory will be. This lab is similar to the projectile motion simulation accept that acceleration is not constant it changes as a function of time due to the air drag.\\
+
+    Note: initial position is 0, initial velocity in the x and y direction should be assessed by the angle of the launcher, but likely in the y direction it should be 0. 
+\end{document}

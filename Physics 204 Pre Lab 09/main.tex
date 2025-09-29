@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym,amsfonts,amssymb,amsthm,amsmath}
+
+\setlength{\parindent}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.8in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{5pt}
+
+\title{Physics 204 Pre Lab 9 - Standing Waves}
+\author{Colin Flanagan}
+\date{March 31st, 2025}
+
+\begin{document}
+
+\maketitle
+
+\subsection*{What is the goal of this experiment? (What principles are we studying?)}
+
+    To predict the speed of a wave through the medium and measure the wavelength at a given frequency. 
+
+\subsection*{What are some reasons why it is important to study these principles?
+}
+
+  Photons are packets of energy that act as a wave; the way we view the classical world is through photons. Electrons also exhibit this particle-wave behavior so it is important for our understanding of the universe to understand waves.
+    
+\subsection*{What basic physics concepts are applicable to this situation, and how do they apply? (Examples: Definitions of movement, Newton’s Laws of Motion, Conservation of Momentum, etc.)}
+
+    Waves\\
+
+    Circuits\\
+
+    Forces(Tension and Gravity)\\
+
+\subsection*{What are some possible questions you can investigate while performing this lab?
+}
+
+   How does the frequency generator change the behavior of the standing waves, as in what frequencies generate standing waves for a given mass? Is there a pattern?
+
+   How does the mass affect the standing waves? For a given frequency known to generate standing waves does changing the mass change the waves?
+
+   How could you verify the mass density per unit length of the string? (Mass of string/length of string?)
+
+\subsection*{Describe your experimental design to accomplish the task. (You should not be writing a bulleted list of steps to be completed, but rather a qualitative description of the process which you will refine with your group during lab. Your pre-lab experimental design should be approximately one to three paragraphs in length.)}
+
+    The equation w to be investigated is shown below
+    \begin{align*}
+        v = \sqrt{T/\mu}
+    \end{align*}
+    to do so a mass will be hung from a string that is attached to the string vibrator that receives signal from the sine generator. This will cause the string to vibrate in a sinusoidal pattern such that the nodes bounces between their two positions. Using the equation 
+    \begin{align*}
+        v = \lambda f
+    \end{align*}
+    and a substitution we see that 
+    \begin{align*}
+        \lambda = \frac{\sqrt{T/\mu}}{f}
+    \end{align*}
+    to take error we can do standard error measuring the wavelength with a meter stick. Here the Expected value is the theoretical value calculated with the equation and the observed is the measured with a meter stick.
+    \begin{align*}
+        \%Error = 100 \times\frac{|Expected -Observed|}{Expected}
+    \end{align*}
+    to propogate error all the way through we can do
+    \begin{align*}
+        \Delta'\lambda &= \sqrt{(\frac{\partial\lambda}{\partial T}\Delta' T)^2 + (\frac{\partial\lambda}{\partial \mu}\Delta' \mu)^2 + (\frac{\partial\lambda}{\partial f}\Delta' f)^2}\\
+        \Delta'\lambda &= \sqrt{
+        (\frac{1}{\mu f}\frac{1}{2\sqrt{T}}\Delta' T)^2 + (\frac{\sqrt{T}}{f}\frac{-1}{2\sqrt{\mu^3}}\Delta' \mu)^2 + (\sqrt{\frac{T}{\mu}}
+        \frac{-1}{f^2}\Delta'f)^2 
+        }
+    \end{align*}
+    where $\Delta'\lambda$ is the error for the expected and the error for the observed would be a chosen value either from the meter stick error or our confidence in our measurement. You could propogate one more step but it is unneccessary as the value for the observed error must be chosen anyway it can be directly used in the same equation for the plus minus values as the actual error values. 
+    \begin{align*}
+        \frac{(a \pm a') - (b \pm b')}{a\pm a'} = \frac{a-b}{a} \pm \frac{a'-b'}{a'}
+    \end{align*}
+\end{document}

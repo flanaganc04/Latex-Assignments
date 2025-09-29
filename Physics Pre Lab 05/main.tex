@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym,amsfonts,amssymb,amsthm,amsmath}
+
+\setlength{\parindent}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.8in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{5pt}
+
+\title{Physics Pre Lab 5 - Friction}
+\author{Colin Flanagan}
+\date{September 23rd, 2024}
+
+\begin{document}
+
+\maketitle
+
+\subsection*{What is the goal of this experiment? (What principles are we studying?)}
+
+    The goal of this experiment is to determine the static and kinetic coefficients of frictions of the four sides of a block using am incline, protractor, stop watch, and meter stick.
+    
+
+\subsection*{What are some reasons why it is important to study these principles?
+}
+
+    Friction is a very important concept to understand because it allows us to do things like walk, drive cars (drift cars), and many more.  
+    
+\subsection*{What basic physics concepts are applicable to this situation, and how do they apply? (Examples: Definitions of movement, Newton’s Laws of Motion, Conservation of Momentum, etc.)}
+
+    Forces and Newton's Laws of Motion\\
+    Kinematics
+
+\subsection*{What are some possible questions you can investigate while performing this lab?
+}
+
+   How will the mass of the cart affect the coefficients? \\
+   
+   How can we measure the initial velocity to measure kinetic friction?\\
+
+   How different materials have different coefficients of frictions.\\
+
+\subsection*{Describe your experimental design to accomplish the task. (You should not be writing a bulleted list of steps to be completed, but rather a qualitative description of the process which you will refine with your group during lab. Your pre-lab experimental design should be approximately one to three paragraphs in length.)}
+
+    To measure the static coefficient of friction we will place the cart on the track at various angles until the cart starts slipping. This point where the force of gravity overcomes the static friction is the static friction max. We can assume that right before the block fell its acceleration was 0. This allows us to assume that 
+    \begin{align*}
+        F &= ma\\
+        F &= (0)a\\
+        F &= 0\\
+        \Sigma{}F_x &= 0\\
+        \Sigma{}F_y &= 0
+    \end{align*}
+    It can then be seen from a free body diagram that the forces in the x directions are the x component of gravity which can be found by taking the mass of the box on the spring scale and the $\sin\theta$ of the angle of the track.
+    \begin{align*}
+        F_g_,_x = mg\sin\theta
+    \end{align*}
+    The y components are normal force and the y component of the force of gravity which can be found through the $\cos\theta$ of the angle of the track. Through these assumptions we see
+    \begin{align*}
+        F_g_,_y = mg\cos\theta 
+    \end{align*}
+    
+    \begin{align*}
+        \Sigma{}F_x = 0 = F_g_,_x - F_s\\
+        \Sigma{}F_y = 0 = F_g_,_y - n.
+    \end{align*}
+    It can then be seen through rearrangements that
+    \begin{align*}
+         F_s = F_g_,_x \\
+         n = F_g_,_y .
+    \end{align*}
+    From here we need to use the notion the the friction coefficients are proportional to normal force. 
+    \begin{align*}
+        F_s \leq \mu_sn\\
+    \end{align*}
+    Again rearrange to see that
+    \begin{align*}
+        \mu_s \leq \frac{F_s}{n}\\
+    \end{align*}
+    Through substitution and elimination the coefficient of static friction can be expressed as
+    \begin{align*}
+        \mu_s \leq \frac{\sin\theta}{\cos\theta}
+    \end{align*}
+    Solving for the kinetic friction of the block is not too different from the static except that the acceleration is not 0. So less assumptions can be made. We should measure the length of the ramp and time how long it takes to go down the ramp from rest. These assumption allow us to make this equation.
+    \begin{align*}
+        r_f &= r_i + v_it + \frac{1}{2}at^2\\
+        r_f &= (0) + (0)t + \frac{1}{2}at^2\\
+        r_f &= \frac{1}{2}at^2\\
+        a &= \frac{2r_f}{t^2}
+    \end{align*}
+    Where $r_f$ is the distance of the ramp. And $t$ is the average time it takes the cart to go down the ramp. Then examining a manipulated force diagram we see that normal force equals the y component of the force of gravity
+    \begin{align*}
+        F_g &= mg\\
+        n &= F_g\cos\theta\\
+        n &= mg\cos\theta.
+    \end{align*}
+    It should also be noted that
+    \begin{align*}
+        F_k = \mu_kn.
+    \end{align*}
+    Then using newtons third law it can be seen that
+    \begin{align*}
+        ma = F_g\sin\theta - F_k.
+    \end{align*}
+    where $F_k$ is the kinetic friction vector. Then using substitution
+    \begin{align*}
+        ma = (mg)\sin\theta - (\mu_k(mg\cos\theta)).
+    \end{align*}
+    Break down the parentheses and eliminate mass
+    \begin{align*}
+        ma &= mg\sin\theta - \mu_kmg\cos\theta\\
+        a &= g\sin\theta - \mu_kg\cos\theta.\\
+    \end{align*}
+    Then isolate $\mu_k$
+    \begin{align*}
+        \mu_kg\cos\theta &= g\sin\theta - a\\
+        \mu_k &= \frac{g\sin\theta - a}{g\cos\theta}.
+    \end{align*}
+    So by solving for the acceleration of the object from rest down the slope we can find the coefficient of friction through this formula.\\
+    \\
+    In short the measurements that need to be taken are the mass of the cart (force in Newtons), the angle at which the cart starts slipping on its own, the distance of the ramp, and the time it takes the object to fall down the ramp. With this information we can use Newton's third law and the kinematic equations to solve for the coefficients of static and kinetic friction.
+
+\end{document}

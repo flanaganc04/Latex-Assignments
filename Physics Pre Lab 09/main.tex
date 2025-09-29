@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym,amsfonts,amssymb,amsthm,amsmath}
+
+\setlength{\parindent}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.8in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{5pt}
+
+\title{Physics Pre Lab 9 - Rocket Launch}
+\author{Colin Flanagan}
+\date{November 11th, 2024}
+
+\begin{document}
+
+\maketitle
+
+\subsection*{What is the goal of this experiment? (What principles are we studying?)}
+
+    The goal of this experiment is to create a simulation of a rocket and its engine to be able to predict its altitude as a function of time.
+    
+
+\subsection*{What are some reasons why it is important to study these principles?
+}
+
+   The last time an aircraft landed on the moon was 1972. People study rockets to see if space travel is profitable or could help earth reduce scarcity issues. In the private sector there are companies like SpaceX, Rocket Lab, and Relativity Space. The federal government also funds the research of rockets through the NSF, and NASA. Therefore there is a lot of investment capital available for research on rockets.
+    
+\subsection*{What basic physics concepts are applicable to this situation, and how do they apply? (Examples: Definitions of movement, Newton’s Laws of Motion, Conservation of Momentum, etc.)}
+
+    Momentum\\
+
+    Conservation of Momentum\\
+
+    Newton's Third Law\\
+
+    Force of Drag\\
+
+    Kinematics\\
+
+    Newtons Second Law\\
+
+\subsection*{What are some possible questions you can investigate while performing this lab?
+}
+
+   How can we determine uncertainties for the values we need to measure experimentally such as the air density, or the drag coefficient, or the mass as a function of time\\
+
+   How can we create a simulation that takes into account so many variables.\\
+
+   Are there some values that are more important to the uncertainty in the altitude than others.\\
+
+   How will we measure the drag coefficient of the rocket especially given that it says there are a variety of rockets.\\
+
+\subsection*{Describe your experimental design to accomplish the task. (You should not be writing a bulleted list of steps to be completed, but rather a qualitative description of the process which you will refine with your group during lab. Your pre-lab experimental design should be approximately one to three paragraphs in length.)}
+
+    The paper by Nelson and Wilson says that to model the rocket's altitude as a function of time we need to find the thrust as a function of time, the mass of the rocket as a function of time, and the necessary constants for the force of drag as a function of velocity such as air density $\rho$, the cross sectional area $A$, and the drag coefficient. This must all be measured empirically. There are also two types of engines to take into account when building this simulation. First the Estes $A8$ and second the Estes $B4$. Both engines provide different thrusts to the engine so the thrust versus time data and the mass versus time data (we can add the mass of the rocket) of the engines are provided through the paper by Thomas A. Dooling. \\ 
+
+    The air density is calculated from an equation given in the lab procedure where 
+    \begin{align*}
+        p_v_a_p_o_r &= \phi p_s_a_t_u_r_a_t_e_d\\
+        p_s_a_t_u_r_a_t_e_d &= 6.1064^(^\frac{17.625T}{T + 243.04}^)\\
+        \rho &= \frac{0.0289652(P- p_v_a_p_o_r)+ 0.018016(6.1064)\phi^(^\frac{17.625T}{T + 243.04}^)}{8.31446T}\\
+    \end{align*}
+    Where $P$ is the absolute pressure, $\phi$ is the relative humidity, and $T$ is the temperature in kelvin.\\
+
+    It is also noted to take account for the force of the floor pushing up on the rocket, the normal force while the rocket is on the ground. Which should be the force of gravity times the mass of the rocket.\\
+
+    Using all of this information Euler's method using the forces from the free body diagram of the rocket will be employed in an excel sheet to simulate the altitude of the rocket as a particle model.
+\end{document}
