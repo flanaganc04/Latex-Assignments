@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym,amsfonts,amssymb,amsthm,amsmath}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Proof Portfolio 3}
+\author{Colin Flanagan}
+\date{October 4th 2024}
+
+\setlength{\parindent}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.8in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{18pt}
+
+\begin{document}
+
+\maketitle
+
+\section*{\underline{Theorem 3.60}} 
+
+\textit{Theorem.} Let $T$ be a right triangle with hypotenuse of length $c$, and sides of length $a$ and $b$. Then $T$ is an isosceles triangle if and only if the area of the right triangle is $\frac{1}{4}c^2$.
+    \begin{proof}
+     Let $T$ be a right triangle with hypotenuse of length $c$, and sides of length $a$ and $b$. Theorem 3.60 is a biconditional statement and therefore, T is isosceles if the area of the right triangle is $\frac{1}{4}c^2$ and the area of the right triangle T is $\frac{1}{4}c^2$ if T is isosceles.\\
+     \\
+     \textbf{Case 1.} Suppose T is isosceles. Then it can be seen that side $a$ and side $b$ are equivalent 
+     \begin{align*}
+         a = b
+     \end{align*}
+     Because we need to show that the Area = $\frac{1}{4}c^2$ we should examine the formula for the area of this triangle where $b$ denotes the magnitude of the base of the triangle and $h$ denotes the magnitude of the height
+     \begin{align*}
+         A &= \frac{1}{2}bh\\
+         A &= \frac{1}{2}(a)(b)\\
+         A &= \frac{1}{2}a(a)\\
+         A &= \frac{1}{2}a^2
+     \end{align*}
+     Consider the Pythagorean theorem of $T$ to isolate $a^2$ and then substitute into the area expression
+     \begin{align*}
+        a^2 + b^2 &= c^2\\
+        a^2 + (a)^2 &= c^2 \\
+        2a^2 &= c^2\\
+        a^2 &= \frac{c^2}{2}
+     \end{align*}
+     Now we shall reexamine the expression for the area of $T$ with this new expression for the side $a$
+     \begin{align*}
+         A &= \frac{1}{2}a^2\\
+         A &= \frac{1}{2}(\frac{c^2}{2})\\
+         A &= \frac{1}{4}c^2
+     \end{align*}
+     Therefore if the right triangle $T$ is an isosceles triangle with hypotenuse of length $c$, and sides of length $a$ and $b$ then its area can be written as $\frac{1}{4}c^2$.\\
+     \\
+     \textbf{Case 2.} Suppose $T$ is a right triangle with hypotenuse of length $c$, and sides of length $a$ and $b$. Suppose the area of $T$ is $\frac{1}{4}c^2$.  Let's consider the two expressions for the area of the triangle, the general expression
+
+     \begin{align*}
+         A &= \frac{1}{2}bh\\
+         A &= \frac{1}{2}(a)(b)\\
+         A &= \frac{1}{2}ab\\
+    \end{align*}
+    and the expression given,
+    \begin{align*}
+        A &= \frac{1}{4}c^2.\\ 
+    \end{align*}
+    We will show these expression are equivalent and use the Pythagorean theorem to substitute for $c^2$
+    \begin{align*}
+        \frac{1}{2}ab & = \frac{1}{4}c^2\\
+        \frac{1}{2}ab & = \frac{1}{4}(a^2+b^2)\\
+        2ab &= a^2+b^2.
+    \end{align*}
+    We will then move $2ab$ to the other side of the expression
+    \begin{align*}
+        0 &= a^2 - 2ab + b^2\\
+        0 &= (a-b)^2\\
+        0 &= a-b\\
+        b &= a.
+    \end{align*}
+    If right triangle $T$ has area of $\frac{1}{4}c^2$ then it can be shown that its two sides $a$ and $b$ are equivalent sides. By the definition of an isosceles triangle, $T$ is isosceles. Because both cases of the biconditional statement are true, then $T$ is an isosceles triangle if and only if the area of the right triangle is $\frac{1}{4}c^2$.
+    \end{proof}
+
+\end{document}

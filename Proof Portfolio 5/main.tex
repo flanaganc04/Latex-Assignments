@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym,amsfonts,amssymb,amsthm,amsmath}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Proof Portfolio 5}
+\author{Colin Flanagan}
+\date{November 26th 2024}
+
+\setlength{\parindent}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.8in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{18pt}
+
+\begin{document}
+
+\maketitle
+
+\section*{\underline{Theorem}} 
+
+\textit{Theorem.} For all positive integers $n$,
+\begin{align*}
+    10^n \equiv 1 \pmod{9}.
+\end{align*}
+
+\begin{proof}
+     We will proceed via induction. Suppose the statement $P(n)$ reads 
+ \begin{align*}
+     10^n \equiv 1 \pmod{9}
+ \end{align*}
+ or that 
+ \begin{align*}
+     9x = 10^n - 1
+ \end{align*}
+ for some $x \in \Bbb{Z}$ by definitions of divides and congruent/modulo.\\
+ 
+\underline{Base Case:} We wish to show that $P(1)$ is true. This is because 1 is the first element of the set of all positive integers. $P(1)$ states that 
+\begin{align*}
+    9x &= 10^{(1)} - 1
+\end{align*}
+Then through manipulation of the right hand side(RHS)
+\begin{align*}
+    &= 10^{(1)} - 1\\
+    &= 10 -1 \\
+    &= 9. 
+\end{align*}
+Through the identity property of multiplication it can be seen that 
+\begin{align*}
+    &= 9(1)
+\end{align*}
+the RHS can be written as the product of $9$ and some integer $x$, in the case of $P(1)$ this $x$ is the integer $1$. Therefore, our base case, $P(1)$, true.\\
+
+\underline{Inductive Step:} Let $k\geq 1$ and suppose that $P(k)$ is true, that 
+\begin{align*}
+    10^k \equiv 1 \pmod{9}
+\end{align*}
+or that 
+\begin{align*}
+    9x = 10^k - 1
+\end{align*}
+for some $x\in\Bbb{Z}$ by the definitions of divides and congruent/modulo.\\
+We wish to show that $P(k+1)$ is true, that
+\begin{align*}
+    10^{k+1} \equiv 1 \pmod{9}
+\end{align*}
+or, in algebraic terms, that 
+\begin{align*}
+    9y = 10^{k+1} - 1
+\end{align*}
+for some $y\in\Bbb{Z}$ by the definitions of divides and congruent/modulo once more. Once again, manipulate the RHS of the equality using rules of exponents
+\begin{align*}
+    &= 10^{k+1} - 1\\
+    &= 10^1(10^k) - 1\\
+    &= 10(10^k) - 1\\
+\end{align*}
+Notice, that to complete the inductive step we must encounter $10^k - 1$ to substitute $P(k)$. One way to do this is by finding a sum that adds to $10$ that involves $1$ so you can distribute. This looks like
+\begin{align*}
+    &= (9+1)(10^k) - 1\\
+    &= 9(10^k) + 1(10^k) - 1\\
+    &= 9(10^k) + \underbrace{10^k - 1}.
+\end{align*}
+Here we can see that we have encountered $P(k)$ and can now substitute to complete the inductive step
+\begin{align*}
+    &= 9(10^k) + 9x\\
+    &= 9(10^k + x)\\
+    &= 9z
+\end{align*}
+Here, the sum of $10^k + 1$ can be written as some integer, $z$, because it is the sum of two integers. Therefore, the RHS is the product of $9$ and some integer $y$, in the case of $P(k+1)$ this $y$ is $z$. Therefore $P(k+1)$ is true, and by the base case, inductive step, and principle of mathematical induction $P(n)$ is true.
+    \end{proof}
+
+\end{document}
+

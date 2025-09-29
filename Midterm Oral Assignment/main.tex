@@ -1,0 +1,176 @@
+\documentclass{beamer}
+
+%\usetheme{Boadilla}
+\usetheme{Madrid}
+
+\usepackage{latexsym,amsfonts,amssymb,amsthm,amsmath}
+\usepackage{verbatim}
+
+\beamertemplatenavigationsymbolsempty
+
+\title{Midterm Oral Assignment}
+\author{Colin Flanagan}
+\institute{Math 333, Fall 2024}
+\date{November 1, 2024}
+
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\frame{
+\frametitle{Theorem}
+
+\begin{theorem}
+For all integers $r$ and $s$, if $s$ is odd then the equation
+$$
+x^2 + 2rx + 2s = 0
+$$
+has no integer solution for x.
+\end{theorem}
+}
+
+
+\frame{
+\frametitle{Proof Layout}
+\begin{itemize}
+    \item We will prove this theorem true via contradiction
+    \item Employ the theorem of the quadratic formula
+    \item Employ the definition of a perfect square
+    \item Observe cases of evenness and oddness
+\end{itemize}
+}
+
+\frame{
+\frametitle{Contradiction}
+Assume there exists integers $r$ and $s$, if $s$ is odd then the equation
+$$
+x^2 + 2rx + 2s = 0
+$$
+does have some integer solutions. If $s$ is odd then 
+$$
+s= 2p + 1
+$$
+for some $p \in \Bbb{Z}$.
+}
+
+\frame{
+\frametitle{Employ Quadratic Formula}
+\begin{align*}
+    x_1_,_2 &= \frac{-(2r) \pm \sqrt{(2r)^2-4(1)(2(2p+1))}}{2(1)}\\
+    \\
+    &= \frac{-2r \pm \sqrt{(4r^2-4(2(2p+1))}}{2}\\
+    \\
+    &= \frac{-2r \pm \sqrt{4(r^2-2(2p+1))}}{2}
+\end{align*}
+}
+\frame{
+\frametitle{Algebraic Manipulations}
+\begin{align*}
+    &= \frac{-2r \pm \sqrt{4(r^2-2(2p+1))}}{2}\\
+    \\
+    &= \frac{-2r \pm 2\sqrt{r^2-4p-2}}{2}\\
+    \\
+    x_1_,_2 &= -r \pm \sqrt{r^2-4p-2}
+\end{align*}
+}
+
+\frame{\frametitle{Adding integers}
+For $x_1,_2$ to be a sum and an integer all the elements of that sum need to be an integer
+$$
+x_1_,_2 &= -r \pm \sqrt{r^2-4p-2}
+$$
+We know that r is some integer
+}
+
+\frame{\frametitle{Definition of a Perfect Square}
+The term under the radical must be some perfect square so
+$$d^2 = r^2 -4p - 2$$
+we will employ the substitution property of addition to add $-r^2$ to both sides
+$$d^2 - r^2 = r^2 -  r^2 -4p - 2$$
+Employ the additive inverse property
+\begin{align*}
+    d^2 - r^2 &= 0 -4p - 2\\
+    d^2 - r^2 &= -4p - 2
+\end{align*}
+}
+
+\frame{\frametitle{Factor out the -2}
+\begin{align*}
+    d^2 - r^2 &= 2(-2p - 1)\\
+    d^2 - r^2 &= -2(2p + 1)
+\end{align*}
+We see that $d^2 - r^2$ is even. We also see it is the product of $-2$ and some odd number. So $d^2 - r^2$ must be the same.
+}
+\frame{\frametitle{Cases of even and odd}
+Square of even number E is even (for some $j \in \Bbb{Z}$)\\
+\begin{align*}
+    (E)^2 &= (2j)^2\\
+    &= 4j^2\\
+    &= 2(2j^2)\\
+    &= 2t
+\end{align*}
+Square of odd number D is odd (for some $k \in \Bbb{Z}$)
+\begin{align*}
+    (D)^2 &= (2k+1)^2\\
+    &=4k^2 + 4k + 1\\
+    &= 2(2k^2 + 2k) + 1\\
+    &=2t + 1
+\end{align*}
+}
+\frame{\frametitle{Even - even, even - odd}
+Even - even (for some $j,f \in \Bbb{Z}$)
+\begin{align*}
+    E_1 - E_2 &= 2j - 2f\\
+    &= 2(j-f)\\
+    &=2t
+\end{align*}
+Even - odd (for some $j,k \in \Bbb{Z}$)
+\begin{align*}
+    E - D &= 2j - 2k - 1\\
+    &= 2j - 2k - 2 + 1\\
+    &= 2(j-k-1) + 1\\
+    &= 2t + 1
+\end{align*}
+}
+
+\frame{\frametitle{Odd - even, odd - odd}
+Odd - even (for some $j,k \in \Bbb{Z}$)
+\begin{align*}
+    D - E &= 2k + 1 - 2j\\
+    &= 2(k-j)+1\\
+    &=2t + 1
+\end{align*}
+Odd - odd (for some $k,f \in \Bbb{Z}$)
+\begin{align*}
+    D_1 - D_2 &= 2k + 1 - 2f - 1\\
+    &= 2k - 2f\\
+    &= 2(k-f)\\
+    &= 2t
+\end{align*}
+}
+
+\frame{\frametitle{What does this mean}
+We know $d^2 - r^2$ is even so only the even - even case and odd - odd case are possible, now let us make sure the other rule holds true that it is twice the opposite of some odd number. Reexamine these cases:
+\begin{align*}
+    E_1 - E_2 &= 2j - 2f\\
+    &= -2(-j + f)
+\end{align*}
+\begin{align*}
+    D_1 - D_2 &= 2k + 1 - 2f - 1\\
+    &= 2k - 2f\\
+    &= -2(-k+f)\\
+\end{align*}
+}
+\frame{
+\frametitle{References and Further Reading}
+Theorem for quadratic formula 
+\begin{align*}
+    x_1 &= \frac{-b + \sqrt{b^2 - 4ac}}{2a}\\
+    \\
+     x_2 &= \frac{-b - \sqrt{b^2 - 4ac}}{2a}\\
+\end{align*}
+}
+\end{document}
+

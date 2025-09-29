@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym,amsfonts,amssymb,amsthm,amsmath}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Proof Portfolio 2}
+\author{Colin Flanagan}
+\date{September 16th 2024}
+
+\setlength{\parindent}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.8in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{18pt}
+
+\begin{document}
+
+\maketitle
+
+\section*{\underline{Theorem 3.30} }
+\textit{Theorem.} Suppose $a,b \in \mathbb{Z}$. If $a^2(b+3)$ is even then $a$ is even or $b$ is odd.\\
+
+\textit{Proof.} We will proceed via contraposition. If $a$ is odd and $b$ is even then $a^2(b+3)$ is odd. Let \\
+\begin{align*}
+    a = 2j +1 
+\end{align*}
+for some $j \in \mathbb{Z}$. Let \\
+\begin{align*}
+    b = 2k
+\end{align*}
+for some $k \in \mathbb{Z}$. It can be seen that
+\begin{align*}
+    a^2(b+3) &= (2j+1)^2((2k)+3)\\
+    &= (4j^2+4j+1)(2k+3)\\
+    &= 8kj^2 + 12j^2 + 8kj + 12j + 2k + 3\\
+    &= 8kj^2 + 12j^2 + 8kj + 12j + 2k + 2 + 1.\\
+\end{align*}
+Factoring by grouping reveals the equation below,
+\begin{align*}
+    &= 2(4kj^2 + 6j^2 + 4kj + 6j + k + 1) + 1\\
+    &= 2p + 1\\
+\end{align*}
+where $p$ is some integer $(4kj^2 + 6j^2 + 4kj + 6j + k + 1)$ by the products and sums of integers.Therefore, if $a$ is odd and $b$ is even than $a^2(b+3)$ can be written using the definition of odd. This makes the contrapositive of Theorem 3.30 true making Theorem 3.30 true as well because a statement and its contrapositive are logically equivalent.
+\end{document}

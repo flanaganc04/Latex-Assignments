@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym,amsfonts,amssymb,amsthm,amsmath}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Proof Portfolio 1}
+\author{Colin Flanagan}
+\date{September 6th 2024}
+
+\setlength{\parindent}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.8in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{18pt}
+
+\begin{document}
+
+\maketitle
+
+\section*{\underline{Theorem 3.17} }
+\textit{Theorem.} If $a$ divides $m$ then $a$ divides $mn$ where $a$, $m$, and $n$ are integers.
+ \begin{proof}    
+     Suppose $a$ divides $m$. We want to show that $a$ divides $mn$. It can be seen that
+    
+    \begin{align*}
+        m &= aq\text{,} \\
+    \end{align*}
+    
+     for some $q \in \mathbb{Z}$ by the definition of divides. Next consider the following substitution
+    
+    \begin{align*}
+        mn &= (aq)n\nonumber \\
+         &= a(qn) \\
+         & = a(r)\\
+         &= ar\\
+    \end{align*}
+    
+    If $a$ divides $m$, then the product of $m$ and $n$, $mn$, can be rewritten using the definition of divides where $r \in \mathbb{Z}$. Therefore $a$ divides $mn$.
+\end{proof}
+
+\section*{\underline{Corollary 3.18}}
+\textit{Theorem.} Assume $n$, $a$ $\in \mathbb{Z}$. If $a$ divides $n$, then $a$ divides $n^2$.
+\begin{proof}
+    Suppose $a$ divides $n$. We want to show that $a$ divides $n^2$. Notice that in Theorem 3.17 we proved that if $a$ divides $m$ then a divides $mn$. It can be seen that $n^2$ is a product of $n$ and some number. We know that $a$ divides $n$ and therefore must divide any product that contains $n$. 
+\end{proof}
+
+
+
+
+
+\section*{\underline{Problem 3.19} }
+\textit{Theorem.} Assume $n$, $a$ $\in \mathbb{Z}$. If $a$ divides $n^2$, then $a$ divides $n$. \\
+
+\textit{Counterexample.} Let $a=4$ and let $n=2$. By the definition of divides for, 4 to divide a number $q$ there must exist some $k$ where k$\in \mathbb{Z}$ and $q$ can be written as
+\begin{align*}
+    q = 4k
+\end{align*}
+Now let us examine each portion of the compound statement above using our example values. It can be seen that
+\begin{align*}
+    n^2 & = (2)^2\\
+    & = 4 \\
+    &= 4(1) &\text{}\\
+\end{align*}
+The integer 1 makes this a true statement therefore 4 divides 4. Using the value $a = 4$ and $n = 2$ the beginning portion of our overall implication is true as it would need to be. Now let us examine the second half of the implication 
+\begin{align*}
+    n &= (2)\\
+     &= 2&\\
+     &= 4(\frac{1}{2}) &\text{} \\
+\end{align*}
+The real number $\frac{1}{2}$ makes this a true statement therefore 4 does not divide 2. Because implications are false when the if portion is true but the then portion is false. In this example, the if portion is true because 4 does divide 4. However the then statement is not true because 4 does not divide 2. Therefore the converse of Corollary 3.18 is a false statement.
+\end{document}

@@ -1,0 +1,129 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym,amsfonts,amssymb,amsthm,amsmath}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Proof Portfolio 4}
+\author{Colin Flanagan}
+\date{October 25th 2024}
+
+\setlength{\parindent}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.8in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{18pt}
+
+\begin{document}
+
+\maketitle
+
+\section*{\underline{Theorem}} 
+
+\textit{Theorem.} For all integers $r$ and $s$, if $s$ is odd then the equation
+\begin{align*}
+    x^2 + 2rx + 2s = 0
+\end{align*}
+has no integer solution for $x$.
+    \begin{proof}
+     For the sake of contradiction assume for all integers $r$ and $s$, if $s$ is odd then the equation 
+     \begin{align*}
+    x^2 + 2rx + 2s = 0
+\end{align*}
+does have some integer solution for $x$. If $s$ is odd then it can be seen that 
+\begin{align*}
+    s = 2p+1
+\end{align*}
+for some integer $p$ by the definition of an odd integer. Using the quadratic formula to solve for the x values of this second degree polynomial it can seen that
+\begin{align*}
+    x_1_,_2 =&  \frac{-(2r) \pm \sqrt{(2r)^2 - 4(1)(2(2p+1))}}{2}\\
+    \\
+     =&  \frac{-2r \pm \sqrt{4r^2 - 4(2(2p+1))}}{2}\\
+     \\
+     =&  \frac{-2r \pm \sqrt{4(r^2 - 2(2p+1)))}}{2}\\
+     \\
+     =&  \frac{-2r \pm 2\sqrt{(r^2 - 2(2p+1)))}}{2}\\
+     \\
+     =& -r \pm \sqrt{r^2-4p-2}
+\end{align*}
+So through this manipulation we can see that overall
+\begin{align*}
+    x =& -r \pm \sqrt{r^2-4p -2}
+\end{align*}
+From the theorem it states that $x$ must be an integer, when adding integers it must be a sum and product of integers. $r$ is an integer, therefore the $\sqrt{r^2 - 4p -2}$ must be an integer. For the square root of a number to be an integer the term under the radical must be some perfect square. Therefore, $r^2 - 4p - 2$ must be a perfect square for $x$ to be an integer. By the definition of a perfect square
+\begin{align*}
+    d^2 = r^2 - 4p - 2
+\end{align*}
+Invoking the substitution property of addition we can add $-r^2$ to both sides of the equality
+\begin{align*}
+    d^2 - r^2 = r^2 - r^2 - 4p - 2
+\end{align*}
+The additive inverse allows us to cancel the $r^2$ and $r^2$ to see that 
+\begin{align*}
+    d^2 - r^2 = 0 - 4p - 2
+\end{align*}
+Associativity of addition and the identity property of zero tells us that 
+\begin{align*}
+    d^2 - r^2 =& -4p - 2\\
+    d^2 - r^2 =& -2(2p+1)
+\end{align*}
+It can be seen that the difference of any two squares would be twice the opposite of some odd number. Let us examine all the cases where $d$ and $r$ are either even or odd. We should note the square of an even is even and the square of an odd is odd shown below. Even number E squared (for some $j \in \Bbb{Z}$:
+\begin{align*}
+    (E)^2 &= (2j)^2\\
+    &= 4j^2\\
+    &= 2(2j^2)\\
+    &=2r\\
+\end{align*}
+Odd number D squares (for some $k \in \Bbb{Z}$):
+\begin{align*}
+    (D)^2 &= (2k+1)^2\\
+    &= (2k+1)(2k+1)\\
+    &= 4k^2 + 4k + 1\\
+    &= 2(2k^2 + 2k) + 1\\
+    &= 2r + 1\\
+\end{align*}
+so this means that whatever evenness or oddness $d$ has $d^2$ will have and likewise with $r$. We know the right hand side will be even. So we now need to know what happens when you subtract even from even, odd from even, even from odd, and odd from odd. We will use $E$ and $D$ again. Even - even (for some $j,f \in \Bbb{Z}$):
+\begin{align*}
+    E_1 - E_2 &= 2j - 2f\\
+    &= 2(j-f)\\
+    &= 2r
+\end{align*}
+So even - even is even. Let's look at even - odd:
+\begin{align*}
+    E - D &= 2j - 2k - 1\\
+    &= 2j - 2k - 2 + 1\\
+    &= 2(j-k-1) + 1\\
+    &= 2r + 1
+\end{align*}
+Odd - even:
+\begin{align*}
+    D - E &= 2k + 1 - 2j\\
+    &= 2k - 2j + 1\\
+    &= 2(k-j) +1\\
+    &= 2r + 1\\
+\end{align*}
+Finally, odd - odd:
+\begin{align*}
+    D_1 - D_2 &= 2k + 1 - 2f - 1\\
+    &= 2k - 2f\\
+    &= 2(k-f)\\
+    &= 2r
+\end{align*}
+From this we can see the only time $d^2 - r^2$ will be even is when both $d$ and $r$ are even or are both odd. We will revisit these instances to show the contradiction. Recall that $d^2 - r^2 = -2(2p+1)$ where the 'hidden' integer is always odd. Let's now look at what happens when you subtract even from even and odd from odd.
+\begin{align*}
+    E_1 - E_2 &= 2j - 2f\\
+    &= -2(-j+f)\\
+    &= -2(-j + f)\\
+\end{align*}
+We can't say anything about the evenness or oddness of the term inside the parentheses. We only know that it will be an integer. Let us check the odd case:
+\begin{align*}
+    D_1 - D_2 &= 2k + 1 - 2f - 1\\
+    &= 2k - 2f\\
+    &= -2(-k+f)\\
+\end{align*}
+Similarly, the term inside the parentheses (the hidden integer) is not odd either. Therefore we have found our contradiction where it should be the opposite of two times some odd number when that is not the case. Therefore there are no integer solutions to the equation $0= x^2 + 2xr + 2s$ if $s$ is odd.
+    \end{proof}
+
+\end{document}
+

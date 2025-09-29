@@ -1,0 +1,93 @@
+\documentclass{beamer}
+
+%\usetheme{Boadilla}
+\usetheme{Madrid}
+
+\usepackage{latexsym,amsfonts,amssymb,amsthm,amsmath, ragged2e, xcolor}
+\usepackage{verbatim}
+
+\beamertemplatenavigationsymbolsempty
+
+\title{Final Oral Assessment}
+\author{Colin Flanagan}
+\institute{Math 333, Fall 2024}
+\date{December 10, 2024}
+
+
+
+\begin{document}
+
+\frame{\titlepage}
+\frame{
+\frametitle{Theorem}
+
+\begin{theorem}
+\RaggedRight{\textcolor{lightgray}{.}}\\
+\centering{For all integers $a$, $b$, and $c$, if $a^2|b$ and $b^3|c$ then $a^6|c$
+}\\
+\RaggedRight{\textcolor{lightgray}{.}}
+\end{theorem}
+}
+
+\frame{
+\frametitle{Proof Outline}
+\\
+We are going to prove this statement is true using contradiction\\
+\RaggedRight{\textcolor{white}{.}}\\ 
+So we need to:
+\begin{itemize}
+\item Find the contradiction
+\item Use this new statement to derive some definitions 
+\item Make some substitutions to draw conclusions about $c$
+\end{itemize}
+}
+
+\frame{
+\frametitle{Contradiction}
+\underline{\textbf{Original Statement:}} For all $a$, $b$, and $c$ $\in \Bbb{Z}$ if $a^2|b$ and $b^3|c$ then $a^6|c$\\
+\RaggedRight{\textcolor{white}{.}}\\ 
+\underline{\textbf{Contradicted Statement:}} There exists $a$, $b$, and $c$ $\in \Bbb{Z}$ such that $a^2|b$ and $b^3|c$ and $a^6$ does not divide $c$\\
+}
+
+\frame{
+\frametitle{Definitions}
+What does it mean for $a^2|b$ and $b^3|c$\\
+$a^2|b \equiv b = ja^2 $\\
+$b^3|c \equiv c = kb^3$\\
+For some integers $j$ and $k$\\  
+\RaggedRight{\textcolor{white}{.}}\\ 
+Now we can start making claims about $c$
+}
+
+\frame{
+\frametitle{Substitutions}
+    \begin{align*}
+        c &= kb^3\\
+        &= k(ja^2)^3\\
+        &= kj^3a^6\\
+        &= (kj^3) * a^6
+    \end{align*}
+    The expression $kj^3$ can be written as some integer because it is the sum and product of integers, and we will call it $r$. Now we can see,
+    \begin{align*}
+        c = ra^6
+    \end{align*}
+}
+
+\frame{
+\frametitle{Can the contradiction be true?}
+\underline{\textbf{Contradicted Statement:}} There exists $a$, $b$, and $c$ $\in \Bbb{Z}$ such that $a^2|b$ and $b^3|c$ and $a^6$ does not divide $c$; but we see that when $a^2|b$ and $b^3|c$ that $c = ra^6$ so $a^6|c$.\\
+\RaggedRight{\textcolor{white}{.}}\\
+This statement is false, therefore the original statement, that for all $a$, $b$, and $c$ $\in \Bbb{Z}$ if $a^2|b$ and $b^3|c$ then $a^6|c$, is true.
+}
+
+\frame{
+\frametitle{References and Further Reading}
+If you were doing a longer talk,
+\begin{itemize}
+    \item Course notes section 3.3 \textit{Proof by Contradiction}\\
+    \item Course notes section 3.1 \textit{Direct proof of conditional statements}\\
+    \textbf{Definition 3.9.} An integer $n$ divides the integer $m$, written $n|m$, if and only if there exists $k \in \Bbb{Z}$ such that $m = nk$. Equivalently, we may also say that $m$ is divisible by $n$.
+\end{itemize}
+}
+\end{document}
+
